@@ -1,0 +1,11 @@
+### Mail de contacto
+POST http://localhost:3011/v1/mail/contacto/eos HTTP/1.1
+Content-Type: application/json
+
+{
+  "nombreApellido": "Diego Diaz Barroso",
+  "email": "diego@prueba.com",
+  "interes": "Contacto",
+  "mensaje": "Hola, quiero contactarlos"
+}
+ 
