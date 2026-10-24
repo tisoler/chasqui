@@ -7,8 +7,8 @@ WORKDIR /app
 # Copiar archivos de dependencias
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 
-# Instalar pnpm
-RUN npm install -g pnpm
+# Instalar pnpm (v11.24.0, igual que packageManager y resto de proyectos)
+RUN npm install -g pnpm@11.24.0
 
 # Instalar dependencias
 RUN pnpm install --frozen-lockfile
@@ -24,8 +24,8 @@ FROM node:24.22.1-alpine
 
 WORKDIR /app
 
-# Instalar pnpm
-RUN npm install -g pnpm
+# Instalar pnpm (v11.24.0, igual que packageManager y resto de proyectos)
+RUN npm install -g pnpm@11.24.0
 
 # Copiar archivos de dependencias
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
